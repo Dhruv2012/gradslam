@@ -109,7 +109,8 @@ def se3_exp(xi: torch.Tensor) -> torch.Tensor:
             + C * omega_hat_sq
         )
 
-    t = torch.mm(V, v.view(3, 1))
+    # t = torch.mm(V, v.view(3, 1))
+    t = V.mm(v.view(3, 1))
     last_row = torch.tensor([0, 0, 0, 1]).type(omega.dtype).to(omega.device)
 
     return torch.cat((torch.cat((R, t), dim=1), last_row.unsqueeze(0)), dim=0)
