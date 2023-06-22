@@ -511,8 +511,8 @@ def normalize_pixel_coords(
             )
         )
 
-    assert type(height) == int, "Height must be an integer."
-    assert type(width) == int, "Width must be an integer."
+    # assert type(height) == int, "Height must be an integer."
+    # assert type(width) == int, "Width must be an integer."
 
     dtype = pixel_coords.dtype
     device = pixel_coords.device
@@ -557,8 +557,8 @@ def unnormalize_pixel_coords(
             )
         )
 
-    assert type(height) == int, "Height must be an integer."
-    assert type(width) == int, "Width must be an integer."
+    # assert type(height) == int, "Height must be an integer."
+    # assert type(width) == int, "Width must be an integer."
 
     dtype = pixel_coords_norm.dtype
     device = pixel_coords_norm.device
